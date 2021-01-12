@@ -1,0 +1,10 @@
+.logo {
+  font-size: 3rem;
+}
+
+.nav_link {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
