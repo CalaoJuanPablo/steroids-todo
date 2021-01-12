@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 // Components
 import MainLayout from '../../layouts/Main'
+import Hero from '../../components/Hero'
 
 function HomeTemplate(): ReactElement {
   return (
@@ -12,7 +13,7 @@ function HomeTemplate(): ReactElement {
         <title>Steroids ToDo | Simple ToDo with steroids</title>
       </Head>
       <MainLayout>
-        <h1 className='f-headline lh-solid'>Steroids ToDo App</h1>
+        <Hero />
       </MainLayout>
     </>
   )

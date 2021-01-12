@@ -1,0 +1,8 @@
+.stack_list {
+  li {
+    &:before {
+      content: '-';
+      margin-right: 8px;
+    }
+  }
+}

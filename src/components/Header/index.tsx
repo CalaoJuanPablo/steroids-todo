@@ -17,11 +17,11 @@ function Header(): ReactElement {
     <header className='w-100 pa4'>
       <div className='w-100 mw8 flex items-center'>
         <Link href='/'>
-          <a className={classnames('link', 'black', 'w4', styles.logo)}>
+          <a className={classnames('link', 'black', 'w4', 'f2')}>
             <i className='far fa-check-square'></i>
           </a>
         </Link>
-        <nav className='f4 lh-copy tr w-100'>
+        <nav className='f4 f5-m lh-copy tr w-100'>
           <ul className='list flex items-center justify-end'>
             <li className='ml3'>
               <Link href='/all'>
