@@ -8,15 +8,15 @@ import styles from './Hero.module.scss'
 function Hero() {
   return (
     <section id='hero' className='w-100 pa4'>
-      <div className='w-100 mw8'>
+      <div className='w-100 mw8 center'>
         <h1 className='f-subheadline lh-solid'>Steroids ToDo App</h1>
-        <p className='f4 f5-m lh-copy'>
+        <p className='f4 f5-ns lh-copy'>
           This is a ToDos app with a very overkill tech stack:
         </p>
         <ul
           className={classnames(
             'f4',
-            'f5-m',
+            'f5-ns',
             'lh-copy',
             'list',
             'mb5',

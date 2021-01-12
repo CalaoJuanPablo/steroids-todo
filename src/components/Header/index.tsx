@@ -15,13 +15,13 @@ function Header(): ReactElement {
 
   return (
     <header className='w-100 pa4'>
-      <div className='w-100 mw8 flex items-center'>
+      <div className='w-100 mw8 flex items-center center'>
         <Link href='/'>
-          <a className={classnames('link', 'black', 'w4', 'f2')}>
+          <a className='link f2 black w4'>
             <i className='far fa-check-square'></i>
           </a>
         </Link>
-        <nav className='f4 f5-m lh-copy tr w-100'>
+        <nav className='f4 f5-ns lh-copy tr w-100'>
           <ul className='list flex items-center justify-end'>
             <li className='ml3'>
               <Link href='/all'>
