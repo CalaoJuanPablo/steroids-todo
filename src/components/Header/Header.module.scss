@@ -4,7 +4,7 @@
 
 .nav_link {
   &:hover,
-  &:active {
+  &--active {
     text-decoration: underline;
   }
 }
