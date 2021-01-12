@@ -5,16 +5,12 @@ import { useRouter } from 'next/router'
 
 // Components
 import MainLayout from '../../layouts/Main'
+import { getToDoState } from '../../utils/getToDoState'
 
 function ToDosTemplate(): ReactElement {
   const { pathname } = useRouter()
-  const thisPageIs = pathname.includes('/all')
-    ? 'All'
-    : pathname.includes('/undone')
-    ? 'Undone'
-    : pathname.includes('/done')
-    ? 'Done'
-    : null
+
+  const toDoState = getToDoState(pathname)
 
   return (
     <>
@@ -22,7 +18,9 @@ function ToDosTemplate(): ReactElement {
         <title>Steroids ToDo | All ToDos</title>
       </Head>
       <MainLayout>
-        <h1 className='f-headline lh-solid'>{thisPageIs} ToDos Page</h1>
+        <h1 className='f-headline lh-solid'>
+          {toDoState?.toUpperCase()} ToDos Page
+        </h1>
       </MainLayout>
     </>
   )

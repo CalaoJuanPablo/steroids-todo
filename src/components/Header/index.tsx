@@ -6,9 +6,12 @@ import classnames from 'classnames'
 
 // Styles
 import styles from './Header.module.scss'
+import { getToDoState } from '../../utils/getToDoState'
 
 function Header(): ReactElement {
   const { pathname } = useRouter()
+
+  const toDoState = getToDoState(pathname)
 
   return (
     <header className='w-100 pa4'>
@@ -26,7 +29,7 @@ function Header(): ReactElement {
                   className={classnames(
                     'link',
                     'black',
-                    pathname.includes('/all')
+                    toDoState === 'all'
                       ? styles['nav_link--active']
                       : styles.nav_link
                   )}
@@ -41,7 +44,7 @@ function Header(): ReactElement {
                   className={classnames(
                     'link',
                     'black',
-                    pathname.includes('/undone')
+                    toDoState === 'undone'
                       ? styles['nav_link--active']
                       : styles.nav_link
                   )}
@@ -56,7 +59,7 @@ function Header(): ReactElement {
                   className={classnames(
                     'link',
                     'black',
-                    pathname.includes('/done')
+                    toDoState === 'done'
                       ? styles['nav_link--active']
                       : styles.nav_link
                   )}
